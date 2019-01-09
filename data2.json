@@ -1,0 +1,51 @@
+{"records":[
+    {
+        "sno": "1001",
+        "sna": "大鵬華城",
+        "tot": "38",
+        "sbi": "17",
+        "sarea": "新店區",
+        "mday": "20181205191821",
+        "lat": "24.99116",
+        "lng": "121.53398",
+        "ar": "新北市新店區中正路700巷3號",
+        "sareaen": "Xindian Dist.",
+        "snaen": "Dapeng Community",
+        "aren": "No. 3, Lane 700 Chung Cheng Road, Xindian District",
+        "bemp": "21",
+        "act": "1"
+    },
+    {
+        "sno": "1002",
+        "sna": "汐止火車站",
+        "tot": "56",
+        "sbi": "1",
+        "sarea": "汐止區",
+        "mday": "20181205191819",
+        "lat": "25.068914",
+        "lng": "121.662748",
+        "ar": "南昌街/新昌路口(西側廣場)",
+        "sareaen": "Xizhi Dist.",
+        "snaen": "Xizhi Railway Station",
+        "aren": "Nanchang St./Xinchang Rd.",
+        "bemp": "55",
+        "act": "1"
+    },
+    {
+        "sno": "1003",
+        "sna": "汐止區公所",
+        "tot": "46",
+        "sbi": "9",
+        "sarea": "汐止區",
+        "mday": "20181205191820",
+        "lat": "25.064162",
+        "lng": "121.658301",
+        "ar": "新台五路一段/仁愛路口(新台五路側汐止地政事務所前機車停車場)",
+        "sareaen": "Xizhi Dist.",
+        "snaen": "Xizhi Dist. Office",
+        "aren": "Sec. 1, Xintai 5th Rd./Ren’ai Rd.",
+        "bemp": "37",
+        "act": "1"
+    }
+]
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        *{
+            box-sizing: border-box;
+            /* 避免被其他設定擠壓到內容 */
+        }
+        .header {
+            padding: 80px;
+            text-align: center;
+            background-color: antiquewhite;
+
+        }
+
+        .navi {
+
+            display: flex;
+            background-color: darkslategrey;
+        }
+        .navi a{
+
+            text-align: center;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            
+        }
+        .navi a:hover{
+            background-color: azure;
+            color: dimgrey;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .sidebar{
+            flex: 30%;
+            background-color: azure;
+            padding:20px;
+        }
+
+
+        .content {
+            flex: 70%;
+            background-color: antiquewhite;
+            padding: 20px;
+
+        }
+        .fakeimg{
+            background-color: rgb(63, 120, 224);
+            width: 100%;
+            padding: 20px;
+        }
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(253, 237, 228);
+        }
+        @media screen and (max-width:600px){
+            .row, .navi{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Website Title</h1>
+        </div>
+        <div class="navi">
+            <a href="javascript:;">MENU 1</a>
+            <a href="javascript:;">MENU 2</a>
+            <a href="javascript:;">MENU 3</a>
+            <a href="javascript:;">MENU 4</a>
+            <a href="javascript:;">MENU 5</a>
+        </div>
+        <div class="row">
+            <div class="sidebar">
+                <h4>elegant high-heels</h4>
+                <p>You want to mess with the look of things? Well, throughout Shoes, styles are used to change the way
+                        elements appear. In some cases, you can even style an entire class of elements.
+                </p>
+                <img class="fakeimg" src="images/123.jpeg">
+            </div>
+            <div class="content">
+                    <h4>elegant high-heels</h4>
+                    <p>You want to mess with the look of things? Well, throughout Shoes, styles are used to change the way
+                            elements appear. In some cases, you can even style an entire class of elements.
+                    </p>
+                    <img class="fakeimg" src="images/123.jpeg">
+            </div>
+        </div>
+        
+        <div class="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+
+</html>

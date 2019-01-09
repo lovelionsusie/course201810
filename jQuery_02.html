@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.5/jquery.pagepiling.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.5/jquery.pagepiling.min.js"></script>
+
+</head>
+
+<body>
+    <div id="pagepiling">
+        <div class="section">section A</div>
+        <div class="section">section B</div>
+        <div class="section">section C</div>
+        <div class="section">section D</div>
+    </div>
+    <style>
+        .section:first-child {
+            background-color: antiquewhite;
+            color: green;
+        }
+
+        .section:nth-child(2) {
+            background-color: burlywood;
+            color: dodgerblue;
+        }
+
+        .section:nth-child(3) {
+            background-color: pink;
+            color: olive;
+        }
+
+        .section:last-child {
+            background-color: ivory;
+            color: rosybrown;
+        }
+    </style>
+    <script>
+        $(function (e) {
+            $('#pagepiling').pagepiling({
+                menu: null,
+                direction: 'vertical',
+                verticalCentered: true,
+                sectionsColor: [],
+                anchors: [],
+                scrollingSpeed: 700,
+                easing: 'swing',
+                loopBottom: false,
+                loopTop: false,
+                css3: true,
+                navigation: {
+                    'textColor': '#000',
+                    'bulletsColor': '#000',
+                    'position': 'right',
+                    'tooltips': ['section1', 'section2', 'section3', 'section4']
+                },
+                normalScrollElements: null,
+                normalScrollElementTouchThreshold: 5,
+                touchSensitivity: 5,
+                keyboardScrolling: true,
+                sectionSelector: '.section',
+                animateAnchor: false,
+
+                //events
+                onLeave: function (index, nextIndex, direction) {
+                    
+                    if (index == 2 && direction == 'down') {
+                        alert("Going to section 3!");
+                    }
+
+                    else if (index == 2 && direction == 'up') {
+                        alert("Going to section 1!");
+                    }
+                },
+                afterLoad: function (anchorLink, index) { },
+                afterRender: function () { },
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Postion Document</title>
+    <style>
+        div.static {
+            position: static;
+        }
+
+        /* default */
+        div.relative {
+            position: relative;
+            top: 15px;
+            left: 20px;
+            border: orangered 1px solid;
+        }
+
+        /* 以預設值static的x,y為基準，作相對位移 */
+        div.absolute {
+            position: absolute;
+            top: 20px;
+            right: 100px;
+            background-color: aquamarine;
+            color: brown;
+        }
+
+        /* 以預設值, body的左上角為基準點作位移 */
+        div.fixed {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            background-color: yellowgreen;
+            color: teal;
+
+        }
+
+        /* 固定在指定座標 */
+        div.sticky {
+            position: sticky;
+            top: 0px;
+            left: 10px;
+            background-color: blueviolet;
+        }
+
+        /* 預設會在static座標，網頁一經捲動會移至指定作標 */
+    </style>
+</head>
+
+<body>
+    <div class="static">this ia a static div</div>
+    <div class="relative">this is a relative div</div>
+    <div class="absolute">this is an absolute div</div>
+    <div class="fixed">this is a fixed div</div>
+    <div class="sticky">this is a sticky div</div>
+    <p>Lorem ipsum dolor sit amet, <span>this is an inline element</span>
+        consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. <span class="block1">Cras dapibus.</span> Vivamus elementum semper nisi.
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum
+        rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+        pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
+        venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+        mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+        cursus nunc,</p>
+    <p>Lorem ipsum dolor sit amet, <span>this is an inline element</span>
+        consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. <span class="block1">Cras dapibus.</span> Vivamus elementum semper nisi.
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum
+        rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+        pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
+        venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+        mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+        cursus nunc,</p>
+    <p>Lorem ipsum dolor sit amet, <span>this is an inline element</span>
+        consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. <span class="block1">Cras dapibus.</span> Vivamus elementum semper nisi.
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum
+        rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+        pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
+        venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+        mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+        cursus nunc,</p>
+    <p>Lorem ipsum dolor sit amet, <span>this is an inline element</span>
+        consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. <span class="block1">Cras dapibus.</span> Vivamus elementum semper nisi.
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum
+        rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+        pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
+        venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+        mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+        cursus nunc,</p>
+    <p>Lorem ipsum dolor sit amet, <span>this is an inline element</span>
+        consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. <span class="block1">Cras dapibus.</span> Vivamus elementum semper nisi.
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum
+        rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+        pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
+        venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+        mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+        cursus nunc,</p>
+    <p>Lorem ipsum dolor sit amet, <span>this is an inline element</span>
+        consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. <span class="block1">Cras dapibus.</span> Vivamus elementum semper nisi.
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum
+        rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+        pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
+        venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+        mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+        cursus nunc,</p>
+</body>
+
+</html>

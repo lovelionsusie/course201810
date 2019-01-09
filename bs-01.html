@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- viewport = 可視範圍 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title> Bootstrap Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <!-- 有順序性 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col">
+                2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+            <div class="w-100"></div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-3" style="background-color:pink;">
+                1 of 3
+            </div>
+            <div class="col-md-auto" style="background-color:rgb(218, 97, 117);">
+                Variable width content
+            </div>
+            <div class="col col-sm-2 col-lg-3" style="background-color:powderblue;">
+                3 of 3
+            </div>
+        </div>
+
+    </div>
+    <!-- flexbox align item -->
+    <style>
+        .row {
+            border: 1px solid black;
+        }
+
+        .align-items-start,
+        .align-items-center,
+        .align-items-end {
+            min-height: 100px;
+        }
+
+        .align-items-start .col {
+            background-color: peru;
+        }
+
+        .align-items-center .col {
+            background-color: rgb(18, 117, 63);
+        }
+
+        .align-items-end .col {
+            background-color: rgb(44, 49, 151);
+            color: white;
+        }
+    </style>
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+    </div>
+    <!-- justify contain -->
+    <style>
+        .justify-content-around,
+        .justify-content-between,
+        .justify-content-center,
+        .justify-content-end,
+        .justify-content-start {
+            min-height: 100px;
+        }
+
+        .col-4 {
+            border: 1px grey solid;
+        }
+
+        .justify-content-start .col-4 {
+            background-color: palevioletred;
+        }
+
+        .justify-content-center .col-4 {
+            background-color: palegoldenrod;
+        }
+
+        .justify-content-end .col-4 {
+            background-color: paleturquoise;
+        }
+
+        .justify-content-around .col-4 {
+            background-color: rgb(173, 114, 175);
+        }
+
+        .justify-content-between .col-4 {
+            background-color: rgb(76, 93, 146);
+        }
+    </style>
+    <div class="container">
+        <div class="row justify-content-start no-gutters">
+            <!-- no gutters 拿掉內距與外距 -->
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+            <!-- ml-auto = margin-left:auto; -->
+        </div>
+        <div class="row">
+            <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+            <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+        </div>
+        <div class="row">
+            <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+            <!-- mr-auto = margin-right: auto; -->
+            <div class="col-auto">.col-auto</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="table-responsive">
+            <!-- 讓容器裡的table 也擁有RWD功能 -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- bootstrap alert element -->
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <!-- dismiss - hiding -->
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="my_alert alert alert-success" role="alert">
+        A simple primary alert—check it out!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <!-- dismiss - hiding -->
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <button class="btn btn-danger mybutton" type="button">close alert</button>
+    <script>
+        $(".mybutton").click(function (e) {
+            $(".my_alert").alert("close");
+        })
+    </script>
+
+    <!-- Pop-out Dialog Window -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal box
+    </button>
+
+    <!-- Modal -->
+    <!-- tabindex 當按下tab鍵，滑鼠游標跳動的順序(無障礙網站空間) -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Dialog content text.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

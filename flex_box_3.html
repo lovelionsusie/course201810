@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Demo Document</title>
+    <style>
+        .flex-start,
+        .flex-end,
+        .flex-center,
+        .flex-space-between,
+        .flex-space-around,
+        .flex-stretch {
+            display: inline-flex;
+            flex-wrap: wrap;
+            /* 
+            若需要容器裡的元素可自動依據容器寬度自動換行
+            */
+            width: 180px;
+            height: 160px;
+            margin: 5px 5px 40px;
+            border: 1px solid black;
+            vertical-align: top;
+        }
+
+        .flex-start {
+            align-content: flex-start;
+        }
+
+        .flex-end {
+            align-content: flex-end;
+        }
+
+        .flex-center {
+            align-content: center;
+        }
+
+        .flex-space-around {
+            align-content: space-around;
+        }
+
+        .flex-space-between {
+            align-content: space-between;
+        }
+
+        .flex-stretch {
+            align-content: stretch;
+        }
+
+        .align-content>div {
+            padding: 15px;
+            margin: 2px;
+            background-color: burlywood
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-start align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="flex-end align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="flex-center align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="flex-space-around align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="flex-space-between align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="flex-stretch align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+
+</html>

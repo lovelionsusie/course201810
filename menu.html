@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu Document</title>
+    <style>
+        ul.lv1{
+            padding: 0;
+        }
+        /* 從垂直排列變成水平排列 */
+        ul.lv1 > li{
+            display: inline-block;
+            min-width: 88px;
+            color: white;
+            background-color: brown;
+            font-size: 2em;
+            border: 2px solid red;
+            padding: 0.5em;
+            position: relative;
+            /* 第一層設定為相對，第二層絕對，則取相對於第一層的絕對位置 */
+            /* display屬性，用來強制轉換block/inline */
+        }
+
+        ul{
+            list-style: none;
+        }
+        ul.lv2{
+            display: none;
+        }
+        ul.lv1:hover{
+            display: block;
+        }
+        ul > li:hover{
+            background-color:palegreen;
+            color: black;
+        }
+        ul > li:hover > ul{
+            position: absolute;
+            display: block;
+            top:2.2em;
+            left:-40px;
+
+        }
+        /* 設定次選單樣是 */
+        ul > li:hover >ul >li{
+            color:black;
+            background-color:rgb(152, 198, 251);
+            display: block;
+            font-size: 1em;
+            border-bottom: 1px solid #ffffff;
+            padding: 0.4em;
+            
+            /* relative相對於原本瀏覽器位置 */
+            
+        }
+    </style>
+</head>
+<body>
+    <ul class="lv1">
+        <li>About
+            <ul class="lv2">
+                <li>History</li>
+                <li>Membership</li>
+                <li>Goal</li>
+            </ul>
+        </li>
+        <li>Select</li>
+        <!-- 前面的空白會造成選單間的空白間隙 -->
+        <li>Product</li>
+        <li>Policy</li>
+        <li>Contact</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .btn{
+            background-color:palegreen;
+            width:150px;
+            height:100px;
+            border: 0px;
+            font-size: 1em; 
+            /* by browser */
+            color: black;
+            padding: 0.5em;
+            text-decoration: none;
+        }
+        .btn:hover{
+            background-color:rgb(164, 164, 255);
+            border-radius: 100%;
+        }
+        /* 附屬選項/狀態可使用 */
+        .bg-r{
+            background-color: red;
+            color:white;
+        }
+        .bg-g{
+            background-color: green;
+            color:white;
+        }
+        .bg-b{
+            background-color: blue;
+            color:white;
+        }
+        /* 1. 設定共用外觀 */
+        /* 2. 設定新類別，只放置顏色 */
+        ul{
+            padding: 0px;
+            list-style: none;
+        }
+        ul > li{
+            width: 200px;
+            display: inline-block;
+        }
+        
+        ul > li:first-child{
+            color:red;
+        }
+        ul > li:nth-child(3){
+            color:green;
+        }
+        ul > li:last-child{
+            color:blue;
+        }
+        /* 1st layer li */
+        /* ul li{} all*/
+        body > button:nth-child(3){
+            border: 5px solid #aadd55;
+        }
+    </style>
+</head>
+<body>
+    <button>BUTTON_ORI</button>
+    <button class="btn">BUTTON</button>
+    <button class="btn bg-r">BUTTON R</button>
+    <button class="btn bg-g">BUTTON G</button>
+    <button class="btn bg-b">BUTTON B</button>
+    <a href="javascript:;" class="btn bg-r">this is a faked btn</a>
+    <!-- btn default transfer data -->
+    <!-- using a tag javascript:; micmic a btn, also can be a # -->
+    <ul>
+        <li>choice 1</li>
+        <li>choice 2</li>
+        <li>choice 3</li>
+        <li>choice 4</li>
+        <li>choice 5</li>
+    </ul>
+</body>
+</html>

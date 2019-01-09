@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Double 11</title>
+    <style>
+        #product-section{
+            width: 100%;
+            text-align: center;
+        }
+        .prod-card-div {
+            width: 30%;
+            position: relative;
+            border: 1px solid red;
+            display: inline-block;
+            margin: 0 5px 0 5px;
+            text-align: center;
+            /* 上 右 下 左 */
+        }
+
+        .prod-card-div>img {
+            /* 圖片是行內元素 */
+            width: 100%;
+            height: auto;
+            display: block;
+
+        }
+
+        .prod-card-div>span {
+            position: absolute;
+            right: 0px;
+            top: 30px;
+            padding: 1px;
+            background-color: yellow;
+            border: 0.5px solid red;
+            font-size: 18pt;
+            font-family: "Microsoft JhengHei";
+        }
+
+        button {
+            bottom: 5px;
+
+            position: relative;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section id="product-section">
+        <div class="prod-card-div">
+            <img src="https://cdn.shopify.com/s/files/1/1238/5828/products/v-wine_red__Women-Backpack-High-Quality-PU-Leather-Mochila-Escolar-School-Bags-For-Teenagers-Girls-Top-handle-Backpacks_739x.jpeg">
+            <span>
+                雙11
+            </span>
+            <h3>進口水桶包</h3>
+            <button>加入購物車</button>
+        </div>
+        <div class="prod-card-div">
+            <img src="https://cdn.shopify.com/s/files/1/1238/5828/products/v-wine_red__Women-Backpack-High-Quality-PU-Leather-Mochila-Escolar-School-Bags-For-Teenagers-Girls-Top-handle-Backpacks_739x.jpeg">
+            <span>
+                雙11
+            </span>
+            <h3>進口水桶包</h3>
+            <button>加入購物車</button>
+        </div>
+        <div class="prod-card-div">
+            <img src="https://cdn.shopify.com/s/files/1/1238/5828/products/v-wine_red__Women-Backpack-High-Quality-PU-Leather-Mochila-Escolar-School-Bags-For-Teenagers-Girls-Top-handle-Backpacks_739x.jpeg">
+            <span>
+                雙11
+            </span>
+            <h3>進口水桶包</h3>
+            <button>加入購物車</button>
+        </div>
+    </section>
+
+</body>
+
+</html>

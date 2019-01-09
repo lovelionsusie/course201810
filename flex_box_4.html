@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Box Document</title>
+    <style>
+        .nowrap,
+        .wrap,
+        .wrap-reverse {
+            display: inline-flex;
+            flex-wrap: wrap;
+            width: 180px;
+            height: 80px;
+            margin: 5px 5px 40px;
+            border: 1px solid black;
+            vertical-align: top;
+        }
+
+        .column {
+            flex-direction: column;
+            width: 120px;
+            height: 180px;
+        }
+
+        .nowrap {
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        .align-content>div {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            background-color: dodgerblue;
+        }
+
+        .column div {
+            background-color: bisque;
+        }
+        .o1{
+            order: 1;
+        }
+        .o2{
+            order: 2;
+        }
+        .o3{
+            order: 3;
+        }
+        .o4{
+            order: 4;
+        }
+        .o5{
+            order: 5;
+        }
+        .o6{
+            order: 6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nowrap align-content">
+        <div class="o6">1</div>
+        <div class="o4">2</div>
+        <div class="o3">3</div>
+        <div class="o1">4</div>
+        <div class="o5">5</div>
+        <div class="o2">6</div>
+    </div>
+    <div class="wrap align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="wrap-reverse align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="nowrap column align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="wrap column align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="wrap-reverse column align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+
+</html>

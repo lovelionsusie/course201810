@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display Document</title>
+    <style>
+        div{
+            background-color: #afffff;
+        }
+        span{
+            background-color: antiquewhite;
+        }
+        span.block1{
+            display:block;
+        }
+        /* 強制轉乘區塊元素 */
+        p.hide1{
+            display:none;
+        }
+        /* 隱藏元素 */
+        div.inline-block{
+            display:inline-block;
+            background-color: #aabb98;
+            width:33%;
+            height: 2em;
+            padding: 0.2em 0em;
+            margin: 5px 0px;
+            /* (上下 左右) */
+            border: 0.8px solid pink;
+        }
+        /* 強制轉型成行內元素(*行內元素不具備寬跟高) */
+    </style>
+</head>
+<body>
+    <div>this is a block element</div>
+    <p>Lorem ipsum dolor sit amet, <span>this is an inline element</span>
+        consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, 
+        nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, 
+        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, 
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. 
+        Integer tincidunt. <span class="block1">Cras dapibus.</span> Vivamus elementum semper nisi. 
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, 
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+    <p class="hide1">
+            成結能麼卻每其院於聽中式目傳國不使要點保它以自時去眼了放行管在，育到不會上當媽遠布，寫到果沒以配化福以界那出紀苦不應火人通和；客支大化力樣當達小國美動接鄉河會希長發了我。車三步母題了定化總落度，陸苦是……標不度了旅表看個真、務代一們上個行己說晚過品明、岸獨就市利所關育數。約地然樣氣我文非西山海期，時下音的位位動建的士共舉你車香星人，良上面問型的老定望點一定完樂的得落前並人先需，門病基我年南支積，畫城人團事空夜社險識辦影情的：要斷我不又洋理帶唱的度供，字電人有。級要理他美他少我自這位以指中和和要基公魚是過就？
+    </p>
+    <div class="inline-block">block1</div>
+    <div class="inline-block">block2</div>
+    <div class="inline-block">block3</div>
+</body>
+</html>

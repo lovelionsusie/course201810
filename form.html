@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Document</title>
+    <style>
+        input{
+            font-size: 16px;
+        }
+        input[type=text]{
+            border: 2px solid red;
+        }
+        textarea[name=form_memo]{
+            width: 100%;
+            min-height: 100px;
+        }
+        input[class]{
+            border: 5px solid royalblue;
+            display: block;
+        }
+        /* check if the same title */
+        input[class^=form]{
+            display: inline-block;
+        }
+        /* check if the same title as the end */
+        input[class$=control]{
+            display: grid;
+        }
+        /* display:-ms microsoft; -webkit chrome; -safari safari; -moz mozilla */
+        /* check if the same title as one of class */
+        input[class~=myradio]{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form method="GET" action="server.php" novalidate>
+    <!-- 表單標籤，不可以在裡面再加入另一個表單標籤
+            method 傳送的方式 
+                POST 透過背景傳輸
+                GET 網址參數 //參數顯示在網址列
+            action 當按下"送出"時，送出的路徑-->
+        <span>Name</span>
+            <input type="text" name="form_name" placeholder="enter your name"/>
+        <!-- type 輸入類型, name 此欄位功能命名, value 預設值, placeholder 提示訊息 
+            會員修改資料時，可能會同時擁有value placeholder兩個特性-->
+        <p></p>
+        <span>Email</span>
+            <input required autocomplete="off" type="email" name="form_email" placeholder="enter your email"/>
+        <!-- required 必填欄位 
+            autocomplete 不自動帶入使用者記憶內容-->
+        <p></p>
+        <span>Password</span>
+            <input required type="password" name="form_pwd"/>
+        <p></p>
+        <textarea name="form_memo" cols="20" rows="4">default text area</textarea>
+        <!-- cols rows 預設屬性  -->
+        <hr>
+        <input type="checkbox" name="weekdays[]" value="0" class="form-control">Sunday
+        <input type="checkbox" name="weekdays[]" value="1" class="form-control">Monday
+        <input type="checkbox" name="weekdays[]" value="2" class="form-control">Tuesday
+        <input type="checkbox" name="weekdays[]" value="3" class="form-control">Wednesday
+        <input type="checkbox" name="weekdays[]" value="4" class="form-control">Thurday
+        <input type="checkbox" name="weekdays[]" value="5" class="form-control">Friday
+        <input type="checkbox" name="weekdays[]" value="6" class="form-control">Saturday
+        <!-- checkbox: no border, inline -->
+        <br>
+        <br>
+        <input type="radio" class="form-control myradio" name="blood" value="A" checked="checked">A
+        <!-- checked 預設值 abbr. checked-->
+        <input type="radio" class="form-control myradio" name="blood" value="B">B
+        <input type="radio" class="form-control myradio" name="blood" value="O">O
+        <input type="radio" class="form-control myradio" name="blood" value="AB">AB
+        <br>
+        <br>
+        <select name="dropdownmenu">
+            <option value="default">===please select===</option>
+            <option value="vue">Vue.Js</option>
+            <option value="Angular">Angular</option>
+            <option value="React">React</option>
+        </select>
+        <hr>
+        <input list="browsers" placeholder="please click to select">
+            <datalist id = "browsers">
+                <!-- RWD for mobile
+                    emmet option*4 -->
+                <option value="Chrome">Chrome</option>
+                <option value="Edge">Edge</option>
+                <option value="Firefox">Firefox</option>
+                <option value="Safari">Safari</option>
+            </datalist>
+        <hr>
+        <table border="1" cellspacing="5" cellpadding="30">
+            <!-- 先列再欄 emmet "table>tr*9>td*9"-->
+            <tr>
+                <td>meow</td>
+                <td>meow</td>
+                <td>meow</td>
+                <td>meow</td>
+                <td>meow</td>
+                <td>meow</td>
+                <td>meow</td>
+                <td>meow</td>
+                <td>meow</td>
+            </tr>
+            <tr>
+                <td colspan="9"></td>
+                <!-- colspan 合併欄位 -->
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="3"></td>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+       
+        <hr>
+        <input type="date" name="bd" id="bd" min="1900-01-01" max="2019-12-31">
+        <input type="number" name="count" id="integer" min="-100" max="100" step="2">
+        <!-- 每 step 遞增或遞減 -->
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

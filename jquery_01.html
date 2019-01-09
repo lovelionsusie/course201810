@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        // alert('This is head alert');
+        $(function (e) {
+            // alert("this alert is showed after body loaded!");
+            $("#b1").click(function (e) {
+                $("#p1").css("background-color", "#c3c3c3");
+            })
+            //$(  ) => jQuery選取器
+            //執行完body才會開始執行的程式
+            //當畫面讀取完成後才執行的程式碼區塊$(function(e){})
+        })
+    </script>
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+    <!-- RWD SlideShow -->
+    <link rel="stylesheet" type="text/css" href="js/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="js/slick-1.8.1/slick/slick-theme.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="js/slick-1.8.1/slick/slick.min.js"></script>
+    
+    <style>
+        .slick-div img{
+            max-height: 300px;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id="p1">Website Content</p>
+    <button id="b1" type="button">Click</button>
+    <a data-fancybox="gallery" href="images/123.jpeg"><img src="images/123.jpeg" width="200px"></a>
+    <a data-fancybox="gallery" href="images/photo-02.jpg"><img src="images/photo-02.jpg" width="200px"></a>
+    <a data-fancybox="video" href="https://www.youtube.com/watch?v=RIj8uNGlgik">
+        YouTube video
+    </a>
+    <!-- slick content -->
+    <div class="slick-div">
+        <div><img src="images/image-01.jpg"></div>
+        <div><img src="images/image-02.jpg"></div>
+        <div><img src="images/image-03.jpg"></div>
+
+    </div>
+    <!--  -->
+    <script type="text/javascript">
+        // initialize
+        $(".slick-div").slick({
+            dots:true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            //adaptiveHeight: true
+            mobileFirst: true,
+            pauseOnHover: true,
+            autoplay: true,
+            autoplaySpeed: 7000,
+            
+        });
+
+    </script>
+
+</body>
+
+</html>

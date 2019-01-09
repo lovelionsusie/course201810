@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+</head>
+
+<body>
+    <!-- 單純呼叫api讀取政府開放平台資料 -->
+    <script>
+        // 利用ajax方式讀取資料
+        $.ajax({
+            //api位置
+            url: "data2.json",
+            //傳送資料的方式
+            type: "get",
+            //資料傳遞的格式
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                // 若需要邏輯判斷時，使用handlebar為佳，可對單筆資料處理
+                $.each(data.records, function (inx, row) {
+                    console.log(row);
+                    $("#result01").html($("#result01").html() + row.sna + "<br>");
+
+                    // 使用handlebar
+                    //var source = document.getElementById("entry-template").innerHTML;
+                    var source = $("#entry-template").html();
+                    var template = Handlebars.compile(source);
+                    var html = template(row);
+                    $("#result02").html($("#result02").html() + html);
+                    console.log("after handlebar");
+                })
+                // 透過handlebar each 直接重複讀取資料集
+                var source = $("#entry-template-2").html();
+                var template = Handlebars.compile(source);
+                var html = template(data);//合成資料集產生html碼
+                $("#result03").html($("#result03").html() + html);
+            }
+        })
+    </script>
+    <h3>資料格式如下:</h3>
+    <div id="result01"></div>
+    <script id="entry-template" type="text/x-handlebars-template">
+
+        <div class="entry">
+          <h1>{{sna}}</h1>
+          <div class="body">
+            尚有{{sbi}},總共{{tot}}輛ubike
+          </div>
+        </div>
+      </script>
+    <div id="result02"></div>
+    <br>
+    <script id="entry-template-2" type="text/x-handlebars-template">
+        {{#each records}}
+        <div class="entry">
+          <h1>{{sna}}</h1>
+          <div class="body">
+            尚有{{sbi}},總共{{tot}}輛ubike
+          </div>
+        </div>
+        {{/each}}
+      </script>
+      
+    <span>以下內容由handlebar each生成</span>
+    <div id="result03"></div>
+</body>
+
+</html>

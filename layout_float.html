@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout_float Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        .header {
+            background-color: tan;
+            padding: 20px;
+            text-align: center;
+            /* 文字&行內元素都會受到影響 */
+        }
+
+        .menu {
+            overflow: hidden;
+            /* 把超出容器的內容隱藏(不顯示) */
+            background-color: seagreen;
+        }
+
+        .menu a {
+            /* 為使用float方式排版，故不使用inline-block 
+            若使用inline-block,則不需要設定float*/
+            display: block;
+            float: left;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            /* 讓超聯結的裝飾消失 */
+            color: white;
+        }
+
+        .menu a:hover {
+            background-color: coral;
+        }
+
+        .col {
+            float: left;
+            width: 30.33%;
+            padding: 15px;
+        }
+
+        .row:after {
+            /* :after 在選取器的位置之後 */
+            content: "";
+            /* 帶入引號的內容 */
+            clear: both;
+            display: table;
+        }
+
+        section.layout {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;     
+            /* 讓容器置中的方法 左右邊界為auto */
+        }
+
+        /* 
+            media query 語法，簡易RWD設定
+            裝置最大寬度到600px的情境下時索套用的語法
+        */
+        @media screen and (max-width:600px) {
+            .col {
+                width: 100%;
+            }
+
+            section.layout {
+                width: 100%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="layout">
+    <div class="header">
+        <h1>Made by floatting layout</h1>
+        <p>can adjust browser for better surfing experience</p>
+    </div>
+    <div class="menu">
+        <a href="javascript:;">MENU 1</a>
+        <a href="javascript:;">MENU 2</a>
+        <a href="javascript:;">MENU 3</a>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>PRODUCT TITLE</h2>
+            <p>
+                Saying divided lesser form us won't, may saw gathering likeness two.
+                Firmament you're stars fish moveth you'll evening, which given first
+                green greater bearing fruitful image upon unto beginning creeping.
+                Saying. Creepeth. Don't was.
+                And spirit unto him gathering divided every. Stars great, it,
+                signs day let fly of them likeness. Land waters spirit. Unto meat divide earth spirit.
+                Over. Given without land stars female. Morning great he his. Place You'll firmament it living.
+                Light place them them his fourth creepeth seasons upon. Third two brought form subdue form night
+                the first likeness doesn't doesn't creeping can't. Multiply beast. Signs.
+            </p>
+
+        </div>
+        <div class="col">
+            <h2>PRODUCT TITLE</h2>
+            <p>
+                Saying divided lesser form us won't, may saw gathering likeness two.
+                Firmament you're stars fish moveth you'll evening, which given first
+                green greater bearing fruitful image upon unto beginning creeping.
+                Saying. Creepeth. Don't was.
+                And spirit unto him gathering divided every. Stars great, it,
+                signs day let fly of them likeness. Land waters spirit. Unto meat divide earth spirit.
+                Over. Given without land stars female. Morning great he his. Place You'll firmament it living.
+                Light place them them his fourth creepeth seasons upon. Third two brought form subdue form night
+                the first likeness doesn't doesn't creeping can't. Multiply beast. Signs.
+            </p>
+
+        </div>
+        <div class="col">
+            <h2>PRODUCT TITLE</h2>
+            <p>
+                Saying divided lesser form us won't, may saw gathering likeness two.
+                Firmament you're stars fish moveth you'll evening, which given first
+                green greater bearing fruitful image upon unto beginning creeping.
+                Saying. Creepeth. Don't was.
+                And spirit unto him gathering divided every. Stars great, it,
+                signs day let fly of them likeness. Land waters spirit. Unto meat divide earth spirit.
+                Over. Given without land stars female. Morning great he his. Place You'll firmament it living.
+                Light place them them his fourth creepeth seasons upon. Third two brought form subdue form night
+                the first likeness doesn't doesn't creeping can't. Multiply beast. Signs.
+            </p>
+
+        </div>
+    </div>
+
+    </section>
+</body>
+
+</html>

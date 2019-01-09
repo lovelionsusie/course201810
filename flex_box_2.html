@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Box TWO</title>
+    <style>
+        .flex-row,
+        .flex-row-reverse,
+        .flex-col,
+        .flex-col-reverse {
+            display: inline-flex;
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgb(0, 0, 0);
+            vertical-align: top;
+            /* 可能會影響到其他物件 like clear:both; */
+        }
+
+        .flex-start,
+        .flex-end,
+        .flex-center,
+        .space-between,
+        .space-around {
+            display: flex;
+            width: 400px;
+            height: 40px;
+            border: 1px solid rgb(0, 0, 0);
+            margin: 5px 0px;
+            /* 可能會影響到其他物件 like clear:both; */
+        }
+
+        .flex-row {
+            flex-direction: row;
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .flex-col-reverse {
+            flex-direction: column-reverse;
+        }
+
+        .item1 {
+            background-color: plum;
+            color: rgb(194, 54, 100);
+        }
+
+        .item2 {
+            background-color: rgb(169, 212, 169);
+            color: rgb(60, 94, 71);
+        }
+
+        .item3 {
+            background-color: rgb(138, 138, 228);
+            color: rgb(70, 54, 92);
+        }
+
+        .flex-item {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .flex-start {
+            justify-content: flex-start;
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .flex-center {
+            justify-content: center;
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        .space-around {
+            justify-content: space-around;
+        }
+
+        .v-flex-start,
+        .v-flex-end,
+        .v-flex-center,
+        .stretch,
+        .baseline {
+            display: inline-flex;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            vertical-align: top;
+        }
+
+        .v-flex-item {
+            width: 40px;
+            text-align: center;
+        }
+
+        .v-flex-start {
+            align-items: flex-start;
+        }
+
+        .v-flex-end {
+            align-items: flex-end;
+        }
+
+        .v-flex-center {
+            align-items: center;
+        }
+
+        .stretch {
+            align-items: stretch;
+        }
+
+        .baseline {
+            align-items: baseline;
+        }
+        .v-item1 {
+            font-size: 30px;
+            line-height: 60px;
+            background-color: plum;
+            color: rgb(194, 54, 100);
+        }
+
+        .v-item2 {
+            line-height: 30px;
+            background-color: rgb(169, 212, 169);
+            color: rgb(60, 94, 71);
+        }
+
+        .v-item3 {
+            font-size: 30px;
+            line-height: 100px;
+            background-color: rgb(138, 138, 228);
+            color: rgb(70, 54, 92);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 水平排列 -->
+    <div class="flex-row">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3">3</div>
+    </div>
+    <div class="flex-row-reverse">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3">3</div>
+    </div>
+    <!-- 垂直排列 -->
+    <div class="flex-col">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3">3</div>
+    </div>
+    <div class="flex-col-reverse">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3">3</div>
+    </div>
+    <hr>
+    <!-- 元素的間距調整 水平 -->
+    <div class="flex-start">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3">3</div>
+    </div>
+    <!-- 靠右對齊 -->
+    <div class="flex-end">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3">3</div>
+    </div>
+    <div class="flex-center">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3">3</div>
+    </div>
+    <!-- 均分所有邊界 最左與最右緊貼容器 -->
+    <div class="space-between">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3">3</div>
+    </div>
+    <!-- 均分所有邊界 最左與最右留白 -->
+    <div class="space-around">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3">3</div>
+    </div>
+    <hr>
+    <!-- 垂直 -->
+    <div class="v-flex-start">
+        <div class="v-flex-item v-item1">1</div>
+        <div class="v-flex-item v-item2">2<br>2</div>
+        <div class="v-flex-item v-item3">3<br>3<br>3</div>
+    </div>
+    <div class="v-flex-end">
+        <div class="v-flex-item v-item1">1</div>
+        <div class="v-flex-item v-item2">2<br>2</div>
+        <div class="v-flex-item v-item3">3<br>3<br>3</div>
+    </div>
+    <div class="v-flex-center">
+        <div class="v-flex-item v-item1">1</div>
+        <div class="v-flex-item v-item2">2<br>2</div>
+        <div class="v-flex-item v-item3">3<br>3<br>3</div>
+    </div>
+    <div class="stretch">
+        <div class="v-flex-item v-item1">1</div>
+        <div class="v-flex-item v-item2">2<br>2</div>
+        <div class="v-flex-item v-item3">3<br>3<br>3</div>
+    </div>
+    <div class="baseline">
+        <div class="v-flex-item v-item1">1</div>
+        <div class="v-flex-item v-item2">2<br>2</div>
+        <div class="v-flex-item v-item3">3<br>3<br>3</div>
+    </div>
+
+    <body>
+
+</html>
